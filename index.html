@@ -8,11 +8,12 @@
         document.getElementsByTagName('body')[0].appendChild(script);
     callback.call()
   }
-  function callback(){
-    console.log('returned from callback');
-  }
+
   function main(){
-    loader('load1.js', callback);
+    var i = 0;
+    loader('load1.js', function(){console.log(i)});
+    i++;
+    loader('load2.js', function(){console.log(i)});
   }
 
   </script>
