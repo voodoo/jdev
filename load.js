@@ -3,7 +3,7 @@
   function main(){
     var s = '<iframe id="iframe" frameborder="0" height="660px" width="350px" scrolling="no" style="padding:0px;position:absolute;top:10px;right:10px;z-index:999999999" border="0"></iframe>';
     document.getElementsByTagName('body')[0].appendChild(s)
-    document.getElementById("iframe").setAttribute('src', "https://github.com/voodoo/jdev/blob/master/iframe.html");
+    document.getElementById("iframe").setAttribute('src', "https://raw.github.com/voodoo/jdev/master/iframe.html");
   }
   main();
 })(window);
