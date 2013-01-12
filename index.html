@@ -5,13 +5,13 @@
   function loader(src,callback){
     var script = document.createElement('script');
         script.src=src;
-        script.addEventListener('load',callback, false)
+        script.addEventListener('load',callback)
         document.getElementsByTagName('body')[0].appendChild(script);
   }
 
   function main(){
 
-    var i = 0;
+
     loader('load1.js', function(){console.log(5)});
     i++;
     loader('load2.js', function(){console.log(i)});
