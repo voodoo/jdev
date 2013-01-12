@@ -12,9 +12,15 @@
   function main(){
 
 
-    loader('load1.js', function(){console.log(5)});
-    i++;
-    loader('load2.js', function(){console.log(i)});
+    loader('http://code.jquery.com/jquery-latest.js', function(){
+        console.log('jquery loaded');
+        loader('load1.js', function(){
+          loader('load2.js', function(){
+            console.log('all done')
+          }
+        })
+      });
+    loader('load2.js', function(){console.log('all done')});
   }
 
   </script>
