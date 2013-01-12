@@ -5,7 +5,7 @@
   function loader(src,callback){
     var script = document.createElement('script');
         script.src=src;
-        script.addEventListener('load',callback)
+        script.addEventListener('load',callback, false)
         document.getElementsByTagName('body')[0].appendChild(script);
   }
 
@@ -16,9 +16,9 @@
       ['load1.js', function(){}],
       ['load2.js', function(){}],
     ];
-
-    for(var i = 0 ; i < files.length ; i++){
-      loader(files[i][0],function(i){console.log(i)});
+    var i = 0;
+    for(i = 0 ; i < files.length ; i++){
+      loader(files[i][0],function(){console.log(i)});
     }
   }
 
