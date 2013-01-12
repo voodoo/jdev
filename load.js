@@ -1,5 +1,4 @@
 (function(window, src){
-  console.log('load')
   function loader(src){
     var script = document.createElement('script');
         script.src=src;
