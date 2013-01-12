@@ -18,7 +18,7 @@
     ];
 
     for(var i = 0 ; i < files.length ; i++){
-      loader(files[i][0],function(){console.log(i)});
+      loader(files[i][0],function(i){console.log(i)});
     }
   }
 
