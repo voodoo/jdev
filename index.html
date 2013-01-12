@@ -11,10 +11,13 @@
   function callback(){
     console.log('returned from callback');
   }
-  loader('load1.js', callback);
+  function main(){
+    loader('load1.js', callback);
+  }
+
   </script>
 </head>
-<body>
+<body onload="main()">
  <h1>Hello hello</h1>
 </body>
 </html>
