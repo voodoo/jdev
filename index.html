@@ -11,16 +11,15 @@
 
   function main(){
 
+    var files = [
+      ['http://code.jquery.com/jquery-latest.js', function(){}],
+      ['load1.js', function(){}],
+      ['load2.js', function(){}],
+    ];
 
-    loader('http://code.jquery.com/jquery-latest.js', function(){
-        console.log('jquery loaded');
-        loader('load1.js', function(){
-          loader('load2.js', function(){
-            console.log('all done')
-          }
-        })
-      });
-    loader('load2.js', function(){console.log('all done')});
+    for(var i = 0 ; i < files.length ; i++){
+      loader(files[i][0],function(){console.log(i)});
+    }
   }
 
   </script>
