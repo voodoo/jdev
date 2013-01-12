@@ -1,1 +1,20 @@
-My GitHub Page
+<html>
+<head>
+  <title>App / Some Site</title>
+  <script type="text/javascript">
+  function loader(src,callback){
+    var script = document.createElement('script');
+        script.src=src;
+        document.getElementsByTagName('body')[0].appendChild(script);
+    callback.call()
+  }
+  function callback(){
+    console.log('returned from callback');
+  }
+  loader('load1.js', callback);
+  </script>
+</head>
+<body>
+ <h1>Hello hello</h1>
+</body>
+</html>
